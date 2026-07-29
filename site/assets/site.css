@@ -61,6 +61,29 @@ ul { padding-left: 1.35rem; }
 hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 .language-links { margin-bottom: 2rem; }
 .language-links a { margin-right: 16px; }
+.language-links a[aria-current] {
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+}
+
+[data-language-section],
+[data-language-label] {
+  display: none;
+}
+
+html[data-language="en"] [data-language-section="en"] {
+  display: block;
+}
+
+html[data-language="zh-Hans"] [data-language-section="zh-Hans"] {
+  display: block;
+}
+
+html[data-language="en"] [data-language-label="en"],
+html[data-language="zh-Hans"] [data-language-label="zh-Hans"] {
+  display: inline;
+}
+
 .notice {
   padding: 14px 18px;
   border-left: 4px solid var(--accent);
