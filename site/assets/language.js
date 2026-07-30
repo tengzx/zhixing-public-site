@@ -35,10 +35,10 @@
 
     const page = window.location.pathname.split("/").filter(Boolean).at(-1) ?? "home";
     const titles = {
-      home: { en: "Zhixing Time", "zh-Hans": "知行" },
-      privacy: { en: "Privacy Policy — Zhixing Time", "zh-Hans": "隐私政策 — 知行" },
-      terms: { en: "Terms of Service — Zhixing Time", "zh-Hans": "服务条款 — 知行" },
-      support: { en: "Support — Zhixing Time", "zh-Hans": "支持 — 知行" }
+      home: { en: "HourNote", "zh-Hans": "HourNote" },
+      privacy: { en: "Privacy Policy — HourNote", "zh-Hans": "隐私政策 — HourNote" },
+      terms: { en: "Terms of Service — HourNote", "zh-Hans": "服务条款 — HourNote" },
+      support: { en: "Support — HourNote", "zh-Hans": "支持 — HourNote" }
     };
     document.title = (titles[page] ?? titles.home)[language];
     document.querySelector("nav")?.setAttribute(
