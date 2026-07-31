@@ -71,16 +71,11 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
   display: none;
 }
 
-html[data-language="en"] [data-language-section="en"] {
+html[data-language] [data-language-section][data-language-active="true"] {
   display: block;
 }
 
-html[data-language="zh-Hans"] [data-language-section="zh-Hans"] {
-  display: block;
-}
-
-html[data-language="en"] [data-language-label="en"],
-html[data-language="zh-Hans"] [data-language-label="zh-Hans"] {
+html[data-language] [data-language-label][data-language-active="true"] {
   display: inline;
 }
 

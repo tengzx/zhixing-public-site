@@ -10,135 +10,111 @@
 </head>
 <body>
   <nav aria-label="Main navigation">
-    <a href="../"><span data-language-label="en">HourNote</span><span data-language-label="zh-Hans">HourNote</span></a>
-    <a href="../privacy/"><span data-language-label="en">Privacy</span><span data-language-label="zh-Hans">隐私</span></a>
-    <a href="../terms/"><span data-language-label="en">Terms</span><span data-language-label="zh-Hans">条款</span></a>
-    <a href="../support/"><span data-language-label="en">Support</span><span data-language-label="zh-Hans">支持</span></a>
+    <a href="../">HourNote</a>
+    <a href="../privacy/"><span data-language-label="en">Privacy</span><span data-language-label="zh-Hans">隐私</span><span data-language-label="zh-Hant">隱私</span><span data-language-label="ja">プライバシー</span><span data-language-label="es">Privacidad</span><span data-language-label="de">Datenschutz</span></a>
+    <a href="../terms/"><span data-language-label="en">Terms</span><span data-language-label="zh-Hans">条款</span><span data-language-label="zh-Hant">條款</span><span data-language-label="ja">利用規約</span><span data-language-label="es">Términos</span><span data-language-label="de">Bedingungen</span></a>
+    <a href="../support/"><span data-language-label="en">Support</span><span data-language-label="zh-Hans">支持</span><span data-language-label="zh-Hant">支援</span><span data-language-label="ja">サポート</span><span data-language-label="es">Soporte</span><span data-language-label="de">Support</span></a>
   </nav>
   <main>
     <article>
-      <div class="language-links"><a href="?lang=en" data-language-link="en">English</a><a href="?lang=zh-Hans" data-language-link="zh-Hans">简体中文</a></div>
+      <div class="language-links"><a href="?lang=en" data-language-link="en">English</a><a href="?lang=zh-Hans" data-language-link="zh-Hans">简体中文</a><a href="?lang=zh-Hant" data-language-link="zh-Hant">繁體中文</a><a href="?lang=ja" data-language-link="ja">日本語</a><a href="?lang=es" data-language-link="es">Español</a><a href="?lang=de" data-language-link="de">Deutsch</a></div>
 
-      <section id="english" lang="en" data-language-section="en">
+      <section lang="en" data-language-section="en">
         <h1>Privacy Policy</h1>
-        <p class="meta">Effective date: July 30, 2026</p>
-        <p>HourNote (“HourNote,” “we,” “us,” or “our”) helps you track time, manage goals and actions, review your calendar, and plan an ideal day. This policy explains what information the app handles, why it is used, when it is shared, how long it is kept, and the choices available to you.</p>
-
+        <p class="meta">Effective date: July 31, 2026</p>
+        <p>HourNote helps you track time, manage goals and actions, and review your calendar. This policy explains what information the app handles, why it is used, when it is shared, how long it is kept, and the choices available to you.</p>
         <h2>1. Information we handle</h2>
-        <ul>
-          <li><strong>Account information:</strong> nickname, preferred language, authentication credentials, and account identifiers. Passwords are sent over HTTPS and are intended to be stored by our authentication service as non-reversible password hashes, not as readable passwords.</li>
-          <li><strong>Third-party sign-in information:</strong> if you choose Sign in with Apple, we receive the Apple account identifier and identity token. Depending on your choices, Apple may also provide your name and email address.</li>
-          <li><strong>Content you create:</strong> time records, event and app names, start and end times, categories, goals, actions, notes, ideal-day settings, and classification results.</li>
-          <li><strong>Technical information:</strong> authentication tokens stored in the device Keychain, app language and preferences, and limited request data such as IP address, timestamps, and error information processed by network infrastructure for delivery, security, and troubleshooting.</li>
-          <li><strong>Notification settings:</strong> the app may request permission to deliver local reminders. Reminder scheduling is handled on your device.</li>
-        </ul>
-        <p>HourNote does not use advertising SDKs, does not track you across other companies’ apps or websites, and does not sell personal information.</p>
-
+        <ul><li><strong>Account information:</strong> preferred language, authentication credentials, and account identifiers.</li><li><strong>Sign in with Apple information:</strong> your Apple account identifier and identity token, and, depending on your choices, your name and email address.</li><li><strong>Content you create:</strong> time records, event and app names, start and end times, categories, goals, actions, notes, and classification results.</li><li><strong>Technical information:</strong> authentication tokens stored in the device Keychain, app preferences, and limited request data such as IP address, timestamps, and error information processed for delivery, security, and troubleshooting.</li><li><strong>Notification settings:</strong> local reminder permission and schedules handled on your device.</li></ul>
+        <p>HourNote does not use advertising SDKs, track you across other companies’ apps or websites, or sell personal information.</p>
         <h2>2. How we use information</h2>
-        <p>We use information to authenticate your account, provide the app’s time-tracking and planning features, keep the iPhone and paired Apple Watch consistent, process optional automatic classification when you use it, prevent abuse, diagnose failures, respond to support requests, and meet legal obligations.</p>
-
-        <h2>3. Local storage, automatic classification, and backup</h2>
-        <p>Ordinary app content is designed to remain available locally and offline. If you use the optional automatic-classification service, the event name and the names and identifiers of candidate categories are sent through our Cloudflare Worker to the OpenAI API so a category can be suggested. Our database stores a one-way hash of the event name, the classification result, model version, timing/status metadata, and any correction you submit; it does not store the raw event name from that request.</p>
-        <p>If iCloud Backup is available in your build and you use it, the latest seven rotating backups of your content are stored in your private iCloud database under your Apple account. Apple processes that data under its own terms and privacy policy.</p>
-
+        <p>We use information to authenticate your account, provide time-tracking and planning features, keep your iPhone and paired Apple Watch consistent, process optional automatic classification when you enable it, prevent abuse, diagnose failures, respond to support requests, and meet legal obligations.</p>
+        <h2>3. Local storage, classification, and backup</h2>
+        <p>Ordinary app content is designed to remain available locally and offline. If you use optional automatic classification, the event name and the names and identifiers of candidate categories are sent through our Cloudflare Worker to the OpenAI API so a category can be suggested. Our database stores a one-way hash of the event name, the classification result, model version, timing and status metadata, and any correction you submit; it does not store the raw event name from that request.</p>
+        <p>If you create a local backup, HourNote exports an archive to a location you choose. HourNote does not upload that backup. You are responsible for protecting and deleting exported copies.</p>
         <h2>4. Sharing and service providers</h2>
-        <p>We share information only as needed to provide features you choose:</p>
-        <ul>
-          <li><strong>Apple:</strong> Sign in with Apple, iCloud/CloudKit backup when enabled, device-to-Watch communication, and App Store distribution.</li>
-          <li><strong>Cloudflare:</strong> hosts the authentication and classification service and its D1 database, and processes limited request and security-log information. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s Privacy Policy</a>.</li>
-          <li><strong>OpenAI:</strong> receives the event name and candidate-category catalog only when you use optional automatic classification. See <a href="https://openai.com/policies/privacy-policy/">OpenAI’s Privacy Policy</a>.</li>
-          <li><strong>Legal and safety:</strong> information may be disclosed if required by law or reasonably necessary to protect users, the public, or the service.</li>
-        </ul>
-        <p>We do not share personal information with data brokers or advertisers.</p>
-
+        <p>We share information only as needed to provide features you choose. Apple provides Sign in with Apple, device-to-Watch system services, and App Store distribution. Cloudflare hosts authentication and classification services and processes limited request and security-log information. OpenAI receives the event name and candidate-category catalog only when you use optional automatic classification. Information may also be disclosed if required by law or reasonably necessary to protect users, the public, or the service. We do not share personal information with data brokers or advertisers.</p>
         <h2>5. Retention</h2>
-        <ul>
-          <li>Local content remains on your device until you delete it, close your account in the app, or remove the app and its data.</li>
-          <li>Account information, refresh-token hashes, classification-request metadata, and classification feedback are retained while your account is active and deleted when account closure is successfully completed, except for limited records we must retain for security, fraud prevention, dispute resolution, or law.</li>
-          <li>Cloudflare Workers operational logs are retained for no more than 7 days under the platform’s current limits. Under OpenAI’s standard API retention, classification inputs and outputs may be retained for up to 30 days for abuse monitoring, unless a legal requirement applies or a shorter approved retention setting is used.</li>
-          <li>When iCloud Backup is enabled, HourNote keeps up to seven rolling backups. iCloud data remains under your Apple account and may also need to be managed through Apple’s iCloud settings.</li>
-        </ul>
-
+        <p>Local content remains on your device until you delete it, close your account in the app, or remove the app and its data. Exported local backups remain wherever you saved them until you delete them. Account information, refresh-token hashes, classification-request metadata, and classification feedback are retained while your account is active and deleted when account closure succeeds, except for limited records required for security, fraud prevention, dispute resolution, or law. Cloudflare Workers operational logs are retained for no more than 7 days under current platform limits. Under OpenAI’s standard API retention, classification inputs and outputs may be retained for up to 30 days for abuse monitoring, unless law requires otherwise or a shorter approved retention setting is used.</p>
         <h2>6. Deletion and your choices</h2>
-        <ul>
-          <li><strong>Close your account:</strong> in HourNote, open Preferences → Other Settings → Close Account. After server confirmation, the app removes your account credentials, associated server data, and account-scoped local data. This action cannot be undone.</li>
-          <li><strong>Delete individual content:</strong> use the deletion controls provided for records, goals, and actions.</li>
-          <li><strong>Remove local data:</strong> close the account or delete the app from your device. Apple may retain system backups according to your device and iCloud settings.</li>
-          <li><strong>Withdraw notification permission:</strong> use iOS Settings → Notifications → HourNote.</li>
-          <li><strong>Withdraw third-party sign-in access:</strong> manage Sign in with Apple in your Apple ID settings. Revoking access does not itself delete your HourNote account; use Close Account for deletion.</li>
-          <li><strong>Request help:</strong> email <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a> if you cannot access the in-app deletion control.</li>
-        </ul>
-
-        <h2>7. Children</h2>
-        <p>HourNote is not directed to children under 13, or the equivalent minimum age in the user’s jurisdiction. If you believe a child provided personal information, contact us so we can delete it.</p>
-
-        <h2>8. Security and international processing</h2>
-        <p>We use safeguards including HTTPS for network transport and the iOS Keychain for authentication tokens. No security measure is perfect. Service providers may process information in countries other than your own, subject to applicable safeguards.</p>
-
-        <h2>9. Changes and contact</h2>
-        <p>We may update this policy as the app changes. We will revise the effective date and provide additional notice when required. Questions or privacy requests can be sent to <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>.</p>
+        <p>You can close your account from Preferences → Other Settings → Close Account. After server confirmation, the app removes account credentials, associated server data, and account-scoped local data. You can delete individual records, goals, and actions with their in-app controls. Deleting the app removes its local app data but does not delete backup files you previously exported elsewhere. Notification permission can be withdrawn in iOS Settings. Sign in with Apple access can be managed in Apple ID settings; revoking access does not itself delete your HourNote account. If you cannot use the in-app deletion control, contact support.</p>
+        <h2>7. Children</h2><p>HourNote is not directed to children under 13, or the equivalent minimum age in the user’s jurisdiction. If you believe a child provided personal information, contact us so we can delete it.</p>
+        <h2>8. Security and international processing</h2><p>We use safeguards including HTTPS for network transport and the iOS Keychain for authentication tokens. No security measure is perfect. Service providers may process information in countries other than your own, subject to applicable safeguards.</p>
+        <h2>9. Changes and contact</h2><p>We may update this policy as the app changes. We will revise the effective date and provide additional notice when required. Questions or privacy requests can be sent to <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>.</p>
       </section>
 
-      <section id="chinese" lang="zh-Hans" data-language-section="zh-Hans">
-        <h1>隐私政策</h1>
-        <p class="meta">生效日期：2026 年 7 月 30 日</p>
-        <p>HourNote（“我们”）用于时间追踪、目标与行动管理、日历复盘和理想日规划。本政策说明 App 处理哪些信息、处理目的、第三方共享、保留期限、删除方式与撤回授权方式。</p>
-
+      <section lang="zh-Hans" data-language-section="zh-Hans">
+        <h1>隐私政策</h1><p class="meta">生效日期：2026 年 7 月 31 日</p>
+        <p>HourNote 用于时间追踪、目标与行动管理和日历复盘。本政策说明 App 处理哪些信息、处理目的、第三方共享、保留期限以及你可以作出的选择。</p>
         <h2>1. 我们处理的信息</h2>
-        <ul>
-          <li><strong>账户信息：</strong>昵称、首选语言、登录凭证与账户标识。密码通过 HTTPS 传输，并应由认证服务以不可逆哈希保存，而不是以可读明文保存。</li>
-          <li><strong>第三方登录信息：</strong>选择 Apple 登录时，我们会收到 Apple 账户标识和身份令牌；Apple 也可能根据你的选择提供姓名和电子邮箱。</li>
-          <li><strong>你创建的内容：</strong>时间记录、事件和 App 名称、开始与结束时间、分类、目标、行动、备注、理想日设置与自动分类结果。</li>
-          <li><strong>技术信息：</strong>保存在设备钥匙串中的登录令牌、App 语言和偏好，以及网络基础设施为传输、安全和排错处理的有限请求信息，例如 IP 地址、时间戳和错误信息。</li>
-          <li><strong>通知设置：</strong>App 可能请求发送本地提醒；提醒调度在设备上完成。</li>
-        </ul>
+        <ul><li><strong>账户信息：</strong>首选语言、登录凭证与账户标识。</li><li><strong>Apple 登录信息：</strong>Apple 账户标识和身份令牌；Apple 也可能根据你的选择提供姓名和电子邮箱。</li><li><strong>你创建的内容：</strong>时间记录、事件和 App 名称、开始与结束时间、分类、目标、行动、备注与自动分类结果。</li><li><strong>技术信息：</strong>保存在设备钥匙串中的登录令牌、App 偏好，以及网络基础设施为传输、安全和排错处理的有限请求信息，例如 IP 地址、时间戳和错误信息。</li><li><strong>通知设置：</strong>本地提醒权限和在设备上处理的提醒计划。</li></ul>
         <p>HourNote 不使用广告 SDK，不跨其他公司的 App 或网站追踪你，也不出售个人信息。</p>
+        <h2>2. 信息使用目的</h2><p>我们将信息用于账户认证、提供时间追踪和规划功能、保持 iPhone 与配对 Apple Watch 状态一致、在你启用时执行可选自动分类、防止滥用、排查故障、处理支持请求和履行法律义务。</p>
+        <h2>3. 本地存储、自动分类与备份</h2><p>普通 App 内容以本地和离线可用为设计原则。如果你使用可选的自动分类服务，事件名称及候选分类的名称和标识会通过我们的 Cloudflare Worker 发送给 OpenAI API，以生成分类建议。我们的数据库只保存事件名称的单向哈希、分类结果、模型版本、耗时与状态信息及你提交的纠正，不保存该请求中的原始事件名称。</p><p>如果你创建本地备份，HourNote 会将归档文件导出到你选择的位置，不会上传该备份。你应自行保护和删除已导出的副本。</p>
+        <h2>4. 第三方共享与服务商</h2><p>我们仅为提供你选择的功能而在必要范围内共享信息。Apple 提供 Apple 登录、设备与 Apple Watch 之间的系统服务及 App Store 分发。Cloudflare 托管认证与分类服务，并处理有限的请求和安全日志信息。OpenAI 仅在你使用可选自动分类时接收事件名称和候选分类目录。法律要求或为保护用户、公众或服务而合理必要时，信息也可能被披露。我们不会向数据经纪商或广告商共享个人信息。</p>
+        <h2>5. 保留期限</h2><p>本地内容会保留到你主动删除、在 App 内完成注销账户，或移除 App 及其数据。导出的本地备份会一直保留在你保存的位置，直到你自行删除。账户信息、刷新令牌哈希、分类请求元数据和分类纠正在账户有效期间保留；账户注销成功后删除，但出于安全、防欺诈、争议处理或法律要求必须保留的有限记录除外。按 Cloudflare 当前平台限制，Workers 运行日志最长保留 7 天。按 OpenAI 标准 API 保留规则，分类输入和输出可能为防止滥用保留最多 30 天；法律要求或获批的更短保留配置除外。</p>
+        <h2>6. 删除与撤回授权</h2><p>你可以前往“偏好设置 → 其他设置 → 注销账户”注销账户。服务器确认后，App 会删除账户登录凭证、服务器关联数据和该账户的本地数据。你可以通过 App 内功能删除单项记录、目标和行动。删除 App 会移除 App 的本地数据，但不会删除你此前导出到其他位置的备份文件。通知权限可在 iOS 设置中撤回。Apple 登录授权可在 Apple ID 设置中管理；撤回授权不会自动删除 HourNote 账户。如果无法使用 App 内注销功能，请联系支持。</p>
+        <h2>7. 儿童</h2><p>HourNote 不面向 13 岁以下儿童或用户所在地法律规定的同等最低年龄。如你认为儿童提供了个人信息，请联系我们删除。</p>
+        <h2>8. 安全与跨境处理</h2><p>我们采用 HTTPS 传输、iOS 钥匙串保存登录令牌等保护措施，但任何措施都无法保证绝对安全。服务商可能在你所在国家或地区之外处理信息，并应遵守适用的保护要求。</p>
+        <h2>9. 变更与联系</h2><p>我们可能随 App 功能变化更新本政策，并修改生效日期；法律要求时会另行通知。隐私问题或请求请发送邮件至 <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>。</p>
+      </section>
 
-        <h2>2. 使用目的</h2>
-        <p>我们仅将信息用于账户认证、提供时间追踪和规划功能、保持 iPhone 与配对 Apple Watch 状态一致、在你使用时执行可选自动分类、防止滥用、排查故障、处理支持请求和履行法律义务。</p>
+      <section lang="zh-Hant" data-language-section="zh-Hant">
+        <h1>隱私政策</h1><p class="meta">生效日期：2026 年 7 月 31 日</p>
+        <p>HourNote 用於時間追蹤、目標與行動管理和日曆回顧。本政策說明 App 處理哪些資訊、處理目的、第三方分享、保留期限以及你可以作出的選擇。</p>
+        <h2>1. 我們處理的資訊</h2><ul><li><strong>帳戶資訊：</strong>偏好語言、登入憑證與帳戶識別碼。</li><li><strong>Apple 登入資訊：</strong>Apple 帳戶識別碼和身分權杖；Apple 也可能根據你的選擇提供姓名和電子郵件地址。</li><li><strong>你建立的內容：</strong>時間記錄、事件和 App 名稱、開始與結束時間、分類、目標、行動、備註與自動分類結果。</li><li><strong>技術資訊：</strong>儲存在裝置鑰匙圈中的登入權杖、App 偏好，以及為傳輸、安全和疑難排解處理的 IP 位址、時間戳記和錯誤資訊等有限請求資訊。</li><li><strong>通知設定：</strong>本機提醒權限和在裝置上處理的提醒排程。</li></ul><p>HourNote 不使用廣告 SDK，不會跨其他公司的 App 或網站追蹤你，也不出售個人資訊。</p>
+        <h2>2. 資訊使用目的</h2><p>我們將資訊用於帳戶驗證、提供時間追蹤和規劃功能、保持 iPhone 與配對 Apple Watch 狀態一致、在你啟用時執行可選的自動分類、防止濫用、排查故障、處理支援請求和履行法律義務。</p>
+        <h2>3. 本機儲存、自動分類與備份</h2><p>一般 App 內容以本機和離線可用為設計原則。如果你使用可選的自動分類服務，事件名稱及候選分類的名稱和識別碼會透過我們的 Cloudflare Worker 傳送給 OpenAI API，以產生分類建議。我們的資料庫只儲存事件名稱的單向雜湊、分類結果、模型版本、耗時與狀態資訊及你提交的修正，不儲存該請求中的原始事件名稱。</p><p>如果你建立本機備份，HourNote 會將封存檔匯出到你選擇的位置，不會上傳該備份。你應自行保護和刪除已匯出的副本。</p>
+        <h2>4. 第三方分享與服務供應商</h2><p>我們僅為提供你選擇的功能而在必要範圍內分享資訊。Apple 提供 Apple 登入、裝置與 Apple Watch 之間的系統服務及 App Store 發行。Cloudflare 託管驗證與分類服務，並處理有限的請求和安全記錄資訊。OpenAI 僅在你使用可選自動分類時接收事件名稱和候選分類目錄。法律要求或為保護使用者、公眾或服務而合理必要時，資訊也可能被披露。我們不會向資料經紀商或廣告商分享個人資訊。</p>
+        <h2>5. 保留期限</h2><p>本機內容會保留到你主動刪除、在 App 內完成註銷帳戶，或移除 App 及其資料。匯出的本機備份會一直保留在你儲存的位置，直到你自行刪除。帳戶資訊、重新整理權杖雜湊、分類請求中繼資料和分類修正在帳戶有效期間保留；帳戶註銷成功後刪除，但出於安全、防詐騙、爭議處理或法律要求必須保留的有限記錄除外。依 Cloudflare 目前平台限制，Workers 執行記錄最長保留 7 天。依 OpenAI 標準 API 保留規則，分類輸入和輸出可能為防止濫用保留最多 30 天；法律要求或獲准的更短保留設定除外。</p>
+        <h2>6. 刪除與撤回授權</h2><p>你可以前往「偏好設定 → 其他設定 → 註銷帳戶」註銷帳戶。伺服器確認後，App 會刪除帳戶登入憑證、伺服器關聯資料和該帳戶的本機資料。你可以透過 App 內功能刪除單項記錄、目標和行動。刪除 App 會移除 App 的本機資料，但不會刪除你此前匯出到其他位置的備份檔案。通知權限可在 iOS 設定中撤回。Apple 登入授權可在 Apple ID 設定中管理；撤回授權不會自動刪除 HourNote 帳戶。如果無法使用 App 內註銷功能，請聯絡支援。</p>
+        <h2>7. 兒童</h2><p>HourNote 不以 13 歲以下兒童或使用者所在地法律規定的同等最低年齡為對象。如你認為兒童提供了個人資訊，請聯絡我們刪除。</p>
+        <h2>8. 安全與跨境處理</h2><p>我們採用 HTTPS 傳輸、iOS 鑰匙圈儲存登入權杖等保護措施，但任何措施都無法保證絕對安全。服務供應商可能在你所在國家或地區之外處理資訊，並應遵守適用的保護要求。</p>
+        <h2>9. 變更與聯絡</h2><p>我們可能隨 App 功能變化更新本政策，並修改生效日期；法律要求時會另行通知。隱私問題或請求請傳送電子郵件至 <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>。</p>
+      </section>
 
-        <h2>3. 本地存储、自动分类与备份</h2>
-        <p>普通 App 内容以本地和离线可用为设计原则。如果你使用可选的自动分类服务，事件名称及候选分类的名称和标识会通过我们的 Cloudflare Worker 发送给 OpenAI API，以生成分类建议。我们的数据库只保存事件名称的单向哈希、分类结果、模型版本、耗时/状态信息及你提交的纠正，不保存该请求中的原始事件名称。</p>
-        <p>如果当前版本提供 iCloud 备份且你使用该功能，最近 7 份循环备份会存入你 Apple 账户下的私有 iCloud 数据库。Apple 依据其条款和隐私政策处理这些数据。</p>
+      <section lang="ja" data-language-section="ja">
+        <h1>プライバシーポリシー</h1><p class="meta">発効日：2026年7月31日</p>
+        <p>HourNoteは、時間の記録、目標とアクションの管理、カレンダーの振り返りを支援します。本ポリシーでは、アプリが取り扱う情報、その利用目的、共有、保存期間、および利用者が選択できる事項について説明します。</p>
+        <h2>1. 取り扱う情報</h2><ul><li><strong>アカウント情報：</strong>優先言語、認証情報、アカウント識別子。</li><li><strong>Appleでサインインの情報：</strong>Appleアカウント識別子とIDトークン。選択内容に応じて、氏名とメールアドレスがAppleから提供される場合があります。</li><li><strong>作成したコンテンツ：</strong>時間記録、イベント名とアプリ名、開始・終了時刻、カテゴリ、目標、アクション、メモ、分類結果。</li><li><strong>技術情報：</strong>デバイスのキーチェーンに保存される認証トークン、アプリ設定、および配信、セキュリティ、トラブルシューティングのために処理されるIPアドレス、タイムスタンプ、エラー情報などの限定的なリクエストデータ。</li><li><strong>通知設定：</strong>ローカル通知の権限とデバイス上で処理されるスケジュール。</li></ul><p>HourNoteは広告SDKを使用せず、他社のアプリやウェブサイトをまたいだ追跡を行わず、個人情報を販売しません。</p>
+        <h2>2. 情報の利用目的</h2><p>アカウント認証、時間記録と計画機能の提供、iPhoneとペアリングされたApple Watchの状態の整合、利用者が有効にした任意の自動分類、不正利用の防止、障害の診断、サポート対応、法的義務の履行に情報を利用します。</p>
+        <h2>3. ローカル保存、自動分類、バックアップ</h2><p>通常のアプリコンテンツは、ローカルかつオフラインで利用できるよう設計されています。任意の自動分類を利用すると、カテゴリ候補を提案するため、イベント名と候補カテゴリの名称・識別子が当社のCloudflare Workerを経由してOpenAI APIに送信されます。当社のデータベースには、イベント名の一方向ハッシュ、分類結果、モデルバージョン、処理時間と状態のメタデータ、および送信された修正が保存されますが、そのリクエストの元のイベント名は保存されません。</p><p>ローカルバックアップを作成すると、HourNoteは利用者が選択した場所にアーカイブを書き出します。HourNoteがそのバックアップをアップロードすることはありません。書き出したコピーの保護と削除は利用者の責任です。</p>
+        <h2>4. 共有とサービス提供者</h2><p>利用者が選択した機能の提供に必要な範囲でのみ情報を共有します。Appleは、Appleでサインイン、デバイスとApple Watch間のシステムサービス、App Storeでの配信を提供します。Cloudflareは認証・分類サービスをホストし、限定的なリクエスト情報とセキュリティログを処理します。OpenAIがイベント名と候補カテゴリ一覧を受け取るのは、任意の自動分類を利用した場合のみです。また、法令により求められる場合、または利用者、公衆、サービスを保護するために合理的に必要な場合、情報を開示することがあります。データブローカーや広告主に個人情報を共有しません。</p>
+        <h2>5. 保存期間</h2><p>ローカルコンテンツは、利用者が削除するか、アプリでアカウントを閉鎖するか、アプリとそのデータを削除するまでデバイスに残ります。書き出したローカルバックアップは、利用者が削除するまで保存先に残ります。アカウント情報、更新トークンのハッシュ、分類リクエストのメタデータ、分類フィードバックはアカウントが有効な間保持され、アカウント閉鎖の完了後に削除されます。ただし、セキュリティ、不正防止、紛争解決、法令のために必要な限定的な記録を除きます。Cloudflare Workersの運用ログは最長7日間保持されます。OpenAIの標準API保持方針では、分類の入力と出力が不正利用監視のため最長30日間保持される場合があります。</p>
+        <h2>6. 削除と選択肢</h2><p>「設定 → その他の設定 → アカウントを閉じる」からアカウントを閉鎖できます。サーバーの確認後、アプリは認証情報、関連するサーバーデータ、アカウントに紐づくローカルデータを削除します。個別の記録、目標、アクションはアプリ内で削除できます。アプリを削除しても、別の場所に書き出したバックアップファイルは削除されません。通知権限はiOS設定で取り消せます。AppleでサインインはApple ID設定で管理できますが、アクセスを取り消してもHourNoteアカウント自体は削除されません。アプリ内の削除操作を利用できない場合は、サポートにご連絡ください。</p>
+        <h2>7. 子ども</h2><p>HourNoteは13歳未満、または利用者の法域で定められた同等の最低年齢未満の子どもを対象としていません。子どもが個人情報を提供したと思われる場合は、削除のため当社にご連絡ください。</p>
+        <h2>8. セキュリティと国際的な処理</h2><p>ネットワーク通信のHTTPSや認証トークンを保存するiOSキーチェーンなどの保護措置を用いています。完全なセキュリティ対策はありません。サービス提供者は、適用される保護措置のもと、利用者の国以外で情報を処理する場合があります。</p>
+        <h2>9. 変更とお問い合わせ</h2><p>アプリの変更に伴って本ポリシーを更新する場合があります。発効日を改訂し、必要な場合は追加でお知らせします。プライバシーに関する質問や要請は、<a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>までお送りください。</p>
+      </section>
 
-        <h2>4. 第三方共享</h2>
-        <ul>
-          <li><strong>Apple：</strong>用于 Apple 登录、启用时的 iCloud/CloudKit 备份、设备与 Apple Watch 通信及 App Store 分发。</li>
-          <li><strong>Cloudflare：</strong>托管认证与分类服务及 D1 数据库，并处理有限的请求与安全日志信息。详见 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</li>
-          <li><strong>OpenAI：</strong>仅在你使用可选自动分类时接收事件名称和候选分类目录。详见 <a href="https://openai.com/policies/privacy-policy/">OpenAI 隐私政策</a>。</li>
-          <li><strong>法律与安全：</strong>法律要求或为保护用户、公众或服务而合理必要时，可能披露信息。</li>
-        </ul>
-        <p>我们不会向数据经纪商或广告商共享个人信息。</p>
+      <section lang="es" data-language-section="es">
+        <h1>Política de privacidad</h1><p class="meta">Fecha de entrada en vigor: 31 de julio de 2026</p>
+        <p>HourNote te ayuda a registrar el tiempo, gestionar objetivos y acciones, y revisar tu calendario. Esta política explica qué información maneja la aplicación, por qué se utiliza, cuándo se comparte, durante cuánto tiempo se conserva y qué opciones tienes.</p>
+        <h2>1. Información que tratamos</h2><ul><li><strong>Información de la cuenta:</strong> idioma preferido, credenciales de autenticación e identificadores de cuenta.</li><li><strong>Información de Iniciar sesión con Apple:</strong> el identificador de tu cuenta de Apple y el token de identidad; según tus elecciones, Apple también puede proporcionar tu nombre y correo electrónico.</li><li><strong>Contenido que creas:</strong> registros de tiempo, nombres de eventos y aplicaciones, horas de inicio y finalización, categorías, objetivos, acciones, notas y resultados de clasificación.</li><li><strong>Información técnica:</strong> tokens guardados en el llavero del dispositivo, preferencias y datos limitados como dirección IP, marcas de tiempo e información de errores.</li><li><strong>Ajustes de notificaciones:</strong> permisos y programación de recordatorios locales en tu dispositivo.</li></ul><p>HourNote no utiliza SDK publicitarios, no te rastrea entre aplicaciones o sitios web de otras empresas y no vende información personal.</p>
+        <h2>2. Cómo utilizamos la información</h2><p>Utilizamos la información para autenticar tu cuenta, ofrecer funciones de registro y planificación del tiempo, mantener sincronizados tu iPhone y el Apple Watch enlazado, procesar la clasificación automática opcional cuando la activas, evitar abusos, diagnosticar fallos, responder a solicitudes de soporte y cumplir obligaciones legales.</p>
+        <h2>3. Almacenamiento local, clasificación y copias de seguridad</h2><p>El contenido habitual está diseñado para seguir disponible localmente y sin conexión. Si utilizas la clasificación automática opcional, el nombre del evento y los nombres e identificadores de las categorías candidatas se envían a la API de OpenAI a través de nuestro Cloudflare Worker. Nuestra base de datos guarda un hash unidireccional del nombre, el resultado, la versión del modelo, metadatos de tiempo y estado y cualquier corrección; no guarda el nombre original del evento.</p><p>Si creas una copia de seguridad local, HourNote exporta un archivo a la ubicación que elijas y no lo sube. Eres responsable de proteger y eliminar las copias exportadas.</p>
+        <h2>4. Cesiones y proveedores de servicios</h2><p>Solo compartimos información cuando es necesario para ofrecer las funciones que eliges. Apple proporciona Iniciar sesión con Apple, los servicios del sistema entre el dispositivo y Apple Watch, y App Store. Cloudflare aloja los servicios de autenticación y clasificación. OpenAI recibe el nombre del evento y el catálogo de categorías únicamente cuando utilizas la clasificación automática opcional. La información también puede comunicarse si la ley lo exige o para proteger a los usuarios, al público o al servicio. No compartimos información personal con intermediarios de datos ni anunciantes.</p>
+        <h2>5. Conservación</h2><p>El contenido local permanece en tu dispositivo hasta que lo eliminas, cierras tu cuenta o borras la aplicación y sus datos. Las copias locales exportadas permanecen donde las guardaste hasta que las elimines. La información de cuenta y clasificación se elimina al completarse el cierre, salvo registros limitados necesarios por seguridad, prevención del fraude, disputas o ley. Los registros de Cloudflare Workers se conservan como máximo 7 días. Las entradas y salidas de OpenAI pueden conservarse hasta 30 días para supervisar abusos, salvo excepciones aplicables.</p>
+        <h2>6. Eliminación y tus opciones</h2><p>Puedes cerrar tu cuenta en Preferencias → Otros ajustes → Cerrar cuenta. Tras la confirmación del servidor, la aplicación elimina las credenciales, los datos asociados del servidor y los datos locales vinculados. Puedes eliminar registros, objetivos y acciones individualmente. Borrar la aplicación no elimina copias exportadas a otro lugar. Puedes retirar las notificaciones en los Ajustes de iOS y gestionar Iniciar sesión con Apple en el Apple ID; revocar el acceso no elimina por sí solo tu cuenta de HourNote. Si no puedes usar la eliminación desde la aplicación, contacta con soporte.</p>
+        <h2>7. Menores</h2><p>HourNote no está dirigido a menores de 13 años ni a personas por debajo de la edad mínima equivalente de su jurisdicción. Si crees que un menor ha proporcionado información personal, contáctanos para eliminarla.</p>
+        <h2>8. Seguridad y tratamiento internacional</h2><p>Aplicamos medidas como HTTPS y el llavero de iOS. Ninguna medida de seguridad es perfecta. Los proveedores pueden tratar información en países distintos al tuyo con las garantías aplicables.</p>
+        <h2>9. Cambios y contacto</h2><p>Podemos actualizar esta política cuando cambie la aplicación, modificar la fecha y avisar cuando sea necesario. Envía preguntas o solicitudes sobre privacidad a <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>.</p>
+      </section>
 
-        <h2>5. 保留期限</h2>
-        <ul>
-          <li>本地内容会保留到你主动删除、在 App 内完成注销账户，或移除 App 及其数据。</li>
-          <li>账户信息、刷新令牌哈希、分类请求元数据和分类纠正在账户有效期间保留；账户注销成功后删除，但出于安全、防欺诈、争议处理或法律要求必须保留的有限记录除外。</li>
-          <li>按 Cloudflare 当前平台限制，Workers 运行日志最长保留 7 天。按 OpenAI 标准 API 保留规则，分类输入和输出可能为防止滥用保留最多 30 天；法律要求或获批的更短保留配置除外。</li>
-          <li>启用 iCloud 备份时，HourNote 保留最多 7 份循环备份；iCloud 数据归属你的 Apple 账户，可能还需在 Apple 的 iCloud 设置中管理。</li>
-        </ul>
-
-        <h2>6. 删除与撤回授权</h2>
-        <ul>
-          <li><strong>注销账户：</strong>在 HourNote 中打开“偏好设置 → 其他设置 → 注销账户”。服务器确认后，App 会删除账户登录凭证、服务器关联数据和该账户的本地数据，且无法撤销。</li>
-          <li><strong>删除单项内容：</strong>使用记录、目标和行动页面提供的删除功能。</li>
-          <li><strong>删除本地数据：</strong>注销账户或从设备删除 App。Apple 仍可能根据设备和 iCloud 设置保留系统备份。</li>
-          <li><strong>撤回通知权限：</strong>前往“iOS 设置 → 通知 → HourNote”。</li>
-          <li><strong>撤回第三方登录授权：</strong>在 Apple ID 设置中管理“通过 Apple 登录”。撤回授权不会自动删除 HourNote 账户；如需删除请使用“注销账户”。</li>
-          <li><strong>需要协助：</strong>如果无法使用 App 内注销功能，请发送邮件至 <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>。</li>
-        </ul>
-
-        <h2>7. 儿童</h2>
-        <p>HourNote 不面向 13 岁以下儿童或用户所在地法律规定的同等最低年龄。如你认为儿童提供了个人信息，请联系我们删除。</p>
-
-        <h2>8. 安全与跨境处理</h2>
-        <p>我们采用 HTTPS 传输、iOS 钥匙串保存登录令牌等保护措施，但任何措施都无法保证绝对安全。服务商可能在你所在国家或地区之外处理信息，并应遵守适用的保护要求。</p>
-
-        <h2>9. 变更与联系</h2>
-        <p>我们可能随 App 功能变化更新本政策，并修改生效日期；法律要求时会另行通知。隐私问题或请求请联系 <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>。</p>
+      <section lang="de" data-language-section="de">
+        <h1>Datenschutzrichtlinie</h1><p class="meta">Gültig ab: 31. Juli 2026</p>
+        <p>HourNote hilft Ihnen, Zeit zu erfassen, Ziele und Aktionen zu verwalten und Ihren Kalender auszuwerten. Diese Richtlinie erklärt, welche Informationen die App verarbeitet, warum sie verwendet werden, wann sie weitergegeben werden, wie lange sie gespeichert bleiben und welche Wahlmöglichkeiten Sie haben.</p>
+        <h2>1. Verarbeitete Informationen</h2><ul><li><strong>Kontoinformationen:</strong> bevorzugte Sprache, Anmeldedaten und Kontokennungen.</li><li><strong>„Mit Apple anmelden“:</strong> Apple-Kontokennung, Identitätstoken sowie abhängig von Ihrer Auswahl Name und E-Mail-Adresse.</li><li><strong>Erstellte Inhalte:</strong> Zeiteinträge, Ereignis- und App-Namen, Zeiten, Kategorien, Ziele, Aktionen, Notizen und Klassifizierungsergebnisse.</li><li><strong>Technische Informationen:</strong> Token im Geräteschlüsselbund, App-Einstellungen sowie begrenzte Daten wie IP-Adresse, Zeitstempel und Fehlerinformationen.</li><li><strong>Benachrichtigungen:</strong> Berechtigung und Zeitplanung lokaler Erinnerungen auf Ihrem Gerät.</li></ul><p>HourNote verwendet keine Werbe-SDKs, verfolgt Sie nicht über Apps oder Websites anderer Unternehmen hinweg und verkauft keine personenbezogenen Daten.</p>
+        <h2>2. Verwendung der Informationen</h2><p>Wir verwenden Informationen für Kontenauthentifizierung, Zeiterfassung und Planung, den Abgleich zwischen iPhone und Apple Watch, die von Ihnen aktivierte optionale Klassifizierung, Missbrauchsprävention, Fehlerdiagnose, Support und gesetzliche Pflichten.</p>
+        <h2>3. Lokale Speicherung, Klassifizierung und Sicherung</h2><p>Gewöhnliche Inhalte bleiben lokal und offline verfügbar. Bei optionaler automatischer Klassifizierung werden Ereignisname sowie Namen und Kennungen möglicher Kategorien über unseren Cloudflare Worker an die OpenAI API gesendet. Unsere Datenbank speichert einen Einweg-Hash, Ergebnis, Modellversion, Zeit- und Statusmetadaten sowie Korrekturen, jedoch nicht den ursprünglichen Ereignisnamen.</p><p>Wenn Sie eine lokale Sicherung erstellen, exportiert HourNote ein Archiv an einen von Ihnen gewählten Ort und lädt es nicht hoch. Sie sind für Schutz und Löschung exportierter Kopien verantwortlich.</p>
+        <h2>4. Weitergabe und Dienstleister</h2><p>Wir geben Informationen nur für gewählte Funktionen weiter. Apple stellt „Mit Apple anmelden“, Systemdienste zwischen Gerät und Apple Watch sowie den App Store bereit. Cloudflare hostet Authentifizierungs- und Klassifizierungsdienste. OpenAI erhält Ereignisname und mögliche Kategorien nur bei optionaler Klassifizierung. Eine Offenlegung kann außerdem gesetzlich vorgeschrieben oder zum Schutz von Nutzern, Öffentlichkeit oder Dienst erforderlich sein. Wir geben keine personenbezogenen Daten an Datenhändler oder Werbetreibende weiter.</p>
+        <h2>5. Speicherdauer</h2><p>Lokale Inhalte bleiben bis zur Löschung, Kontoschließung oder Entfernung der App auf Ihrem Gerät. Exportierte Sicherungen bleiben bis zu Ihrer Löschung am Speicherort. Konto- und Klassifizierungsdaten werden nach erfolgreicher Kontoschließung gelöscht, ausgenommen begrenzte Daten für Sicherheit, Betrugsprävention, Streitbeilegung oder Recht. Cloudflare-Workers-Protokolle werden höchstens 7 Tage gespeichert. OpenAI-Ein- und -Ausgaben können zur Missbrauchskontrolle bis zu 30 Tage gespeichert werden, sofern keine Ausnahme gilt.</p>
+        <h2>6. Löschung und Wahlmöglichkeiten</h2><p>Sie können Ihr Konto unter Einstellungen → Weitere Einstellungen → Konto schließen schließen. Nach Serverbestätigung entfernt die App Anmeldedaten, Serverdaten und kontobezogene lokale Daten. Einträge, Ziele und Aktionen lassen sich einzeln löschen. Das Entfernen der App löscht keine zuvor exportierten Sicherungen. Benachrichtigungen können in iOS widerrufen und „Mit Apple anmelden“ in den Apple-ID-Einstellungen verwaltet werden; der Widerruf löscht das HourNote-Konto nicht. Falls die App-Löschung nicht möglich ist, wenden Sie sich an den Support.</p>
+        <h2>7. Kinder</h2><p>HourNote richtet sich nicht an Kinder unter 13 Jahren oder unter dem entsprechenden Mindestalter ihres Rechtsraums. Wenn ein Kind personenbezogene Daten bereitgestellt hat, kontaktieren Sie uns zur Löschung.</p>
+        <h2>8. Sicherheit und internationale Verarbeitung</h2><p>Wir verwenden HTTPS und den iOS-Schlüsselbund. Keine Sicherheitsmaßnahme ist vollkommen. Dienstleister können Informationen unter geltenden Schutzmaßnahmen in anderen Ländern verarbeiten.</p>
+        <h2>9. Änderungen und Kontakt</h2><p>Wir können diese Richtlinie bei Änderungen der App aktualisieren, das Datum anpassen und bei Bedarf zusätzlich informieren. Fragen oder Datenschutzanfragen senden Sie an <a href="mailto:teng.tzx@gmail.com">teng.tzx@gmail.com</a>.</p>
       </section>
     </article>
   </main>
-  <footer>© 2026 <span data-language-label="en">HourNote</span><span data-language-label="zh-Hans">HourNote</span></footer>
+  <footer>© 2026 HourNote</footer>
 </body>
 </html>
