@@ -48,7 +48,8 @@
       home: { en: "HourNote", "zh-Hans": "HourNote", "zh-Hant": "HourNote", ja: "HourNote", es: "HourNote", de: "HourNote" },
       privacy: { en: "Privacy Policy — HourNote", "zh-Hans": "隐私政策 — HourNote", "zh-Hant": "隱私政策 — HourNote", ja: "プライバシーポリシー — HourNote", es: "Política de privacidad — HourNote", de: "Datenschutzrichtlinie — HourNote" },
       terms: { en: "Terms of Service — HourNote", "zh-Hans": "服务条款 — HourNote", "zh-Hant": "服務條款 — HourNote", ja: "利用規約 — HourNote", es: "Términos del servicio — HourNote", de: "Nutzungsbedingungen — HourNote" },
-      support: { en: "Support — HourNote", "zh-Hans": "支持 — HourNote", "zh-Hant": "支援 — HourNote", ja: "サポート — HourNote", es: "Soporte — HourNote", de: "Support — HourNote" }
+      support: { en: "Support — HourNote", "zh-Hans": "支持 — HourNote", "zh-Hant": "支援 — HourNote", ja: "サポート — HourNote", es: "Soporte — HourNote", de: "Support — HourNote" },
+      automation: { en: "App tracking automation — HourNote", "zh-Hans": "App 自动追踪设置 — HourNote", "zh-Hant": "App 自動追蹤設定 — HourNote", ja: "App使用記録のオートメーション — HourNote", es: "Automatización de seguimiento de apps — HourNote", de: "Automation zur App-Erfassung — HourNote" }
     };
     document.title = (titles[page] ?? titles.home)[language];
     document.querySelector("nav")?.setAttribute(

@@ -92,3 +92,98 @@ footer {
   padding-bottom: 36px;
   text-align: center;
 }
+
+.guide-main {
+  width: min(1040px, calc(100% - 32px));
+}
+
+.guide-article {
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.guide-kicker {
+  margin-bottom: .4rem;
+  color: var(--accent);
+  font-size: .82rem;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.guide-lede {
+  margin: -.5rem 0 1.6rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.guide-steps {
+  padding-left: 1.5rem;
+}
+
+.guide-steps > li {
+  margin-block: 1.15rem 1.8rem;
+  padding-left: .35rem;
+}
+
+.guide-steps > li > strong,
+.guide-steps > li > span {
+  display: block;
+}
+
+.guide-steps > li > span {
+  margin-top: .2rem;
+}
+
+.checklist li::marker {
+  color: var(--accent);
+  content: "✓  ";
+  font-weight: 700;
+}
+
+figure {
+  margin: 1.1rem 0 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--background);
+}
+
+.guide-steps img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin-inline: auto;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgb(16 24 40 / 12%);
+}
+
+figcaption {
+  margin-top: .8rem;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.privacy-note {
+  margin-top: 2rem;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+@media (max-width: 520px) {
+  .guide-main {
+    width: min(100% - 20px, 1040px);
+  }
+
+  .guide-article {
+    padding-inline: 18px;
+  }
+
+  figure {
+    padding: 10px;
+  }
+}

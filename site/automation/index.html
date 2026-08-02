@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Illustrated setup guide for HourNote app tracking automations in Apple Shortcuts.">
+  <title>App tracking automation — HourNote</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/language.js"></script>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a href="../">HourNote</a>
+    <a href="../automation/"><span data-language-label="en">Automation guide</span><span data-language-label="zh-Hans">自动化指南</span><span data-language-label="zh-Hant">自動化指南</span><span data-language-label="ja">オートメーションガイド</span><span data-language-label="es">Guía de automatización</span><span data-language-label="de">Automationsanleitung</span></a>
+    <a href="../support/"><span data-language-label="en">Support</span><span data-language-label="zh-Hans">支持</span><span data-language-label="zh-Hant">支援</span><span data-language-label="ja">サポート</span><span data-language-label="es">Soporte</span><span data-language-label="de">Support</span></a>
+  </nav>
+  <main class="guide-main">
+    <article class="guide-article">
+      <div class="language-links"><a href="?lang=en" data-language-link="en">English</a><a href="?lang=zh-Hans" data-language-link="zh-Hans">简体中文</a><a href="?lang=zh-Hant" data-language-link="zh-Hant">繁體中文</a><a href="?lang=ja" data-language-link="ja">日本語</a><a href="?lang=es" data-language-link="es">Español</a><a href="?lang=de" data-language-link="de">Deutsch</a></div>
+
+      <section lang="en" data-language-section="en">
+        <p class="guide-kicker">HourNote · Apple Shortcuts</p>
+        <h1>Automatically track app usage</h1>
+        <p class="guide-lede">Create two personal automations for every app you want to track: one starts the record when the app opens, and the other ends it when the app closes.</p>
+        <div class="notice"><strong>The step most often missed:</strong> after configuring the App trigger, tap <strong>Create New Shortcut</strong> first. Search for HourNote only after the shortcut editor opens.</div>
+        <h2>Before you begin</h2>
+        <ul class="checklist"><li>Open HourNote once so its actions are registered with Shortcuts.</li><li>Keep HourNote installed while using these automations.</li><li>Use a separate opening and closing automation for each tracked app.</li></ul>
+        <h2>Set up the opening automation</h2>
+        <ol class="guide-steps">
+          <li><strong>Create an App automation.</strong><span>Open <strong>Shortcuts → Automation</strong>, tap <strong>+</strong>, then choose <strong>App</strong>.</span></li>
+          <li><strong>Choose the trigger.</strong><span>Select the app to track, select only <strong>Is Opened</strong>, choose <strong>Run Immediately</strong>, and turn off <strong>Notify When Run</strong> if you do not want a notification each time.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/en/app-trigger.png" alt="English App automation trigger with Safari selected, Is Opened and Run Immediately enabled"><figcaption>Example trigger for Safari. For the second automation, select Is Closed instead.</figcaption></figure></li>
+          <li><strong>Open the action editor.</strong><span>Tap <strong>Next</strong>, then tap the gray <strong>Create New Shortcut</strong> tile. Do not search for HourNote on the first suggestion screen.</span></li>
+          <li><strong>Find the HourNote actions.</strong><span>In the new shortcut editor, tap <strong>Search Actions</strong>, enter <strong>HourNote</strong>, and choose <strong>Start App Tracking</strong>.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/en/hournote-actions.png" alt="English Shortcuts search showing End App Tracking and Start App Tracking"><figcaption>Both HourNote actions appear in the shortcut editor.</figcaption></figure></li>
+          <li><strong>Name the app record.</strong><span>Enter a clear <strong>App Name</strong>, such as Safari. Turn off <strong>Show When Run</strong>, then finish the shortcut.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/en/start-action.png" alt="English Start App Tracking action with Safari entered and Show When Run disabled"><figcaption>The text you enter becomes the name shown in HourNote.</figcaption></figure></li>
+        </ol>
+        <h2>Set up the closing automation</h2>
+        <ol class="guide-steps"><li><strong>Create another App automation</strong> for the same app, but select only <strong>Is Closed</strong> and choose <strong>Run Immediately</strong>.</li><li>Tap <strong>Next → Create New Shortcut</strong>, search for HourNote, and choose <strong>End App Tracking</strong>. It needs no app-name parameter.</li><li>Turn off <strong>Show When Run</strong> and finish. Your Automation list should now contain one opening row and one closing row.</li></ol>
+        <h2>Test it</h2>
+        <p>Open the tracked app, use it longer than HourNote’s minimum app-tracking duration, then close or leave it. Open HourNote and check the calendar for the completed record.</p>
+        <h2>If it does not work</h2>
+        <ul><li><strong>HourNote actions are missing:</strong> open HourNote once, fully close Shortcuts, reopen it, and search from inside <strong>Create New Shortcut</strong>.</li><li><strong>A record never starts:</strong> make sure the opening automation uses <strong>Run Immediately</strong> and that App Name is not empty.</li><li><strong>A record never ends:</strong> confirm there is a second automation using <strong>Is Closed</strong> and <strong>End App Tracking</strong>.</li><li><strong>Short uses are absent:</strong> Settings → Tracking contains a minimum-duration filter. Use the app longer than that value while testing.</li></ul>
+        <p class="privacy-note">HourNote receives only the name you enter and the automation timestamps. These actions do not read the tracked app’s screen or content.</p>
+      </section>
+
+      <section lang="zh-Hans" data-language-section="zh-Hans">
+        <p class="guide-kicker">HourNote · Apple 快捷指令</p>
+        <h1>自动追踪 App 使用时间</h1>
+        <p class="guide-lede">每个要追踪的 App 都需要两条个人自动化：打开 App 时开始记录，关闭 App 时结束记录。</p>
+        <div class="notice"><strong>最容易漏掉的关键步骤：</strong>配置 App 触发条件后，必须先点<strong>“新建快捷指令”</strong>，进入编辑器以后再搜索 HourNote。</div>
+        <h2>开始前</h2>
+        <ul class="checklist"><li>先打开一次 HourNote，让系统向“快捷指令”注册动作。</li><li>使用自动化期间不要卸载 HourNote。</li><li>每个 App 的“打开”和“关闭”必须分别建立两条自动化。</li></ul>
+        <h2>设置“打开 App”自动化</h2>
+        <ol class="guide-steps">
+          <li><strong>新建 App 自动化。</strong><span>打开<strong>快捷指令 → 自动化</strong>，点右上角 <strong>+</strong>，选择 <strong>App</strong>。</span></li>
+          <li><strong>选择触发条件。</strong><span>选中要追踪的 App，只勾选<strong>“已打开”</strong>，选择<strong>“立即运行”</strong>；不想每次弹通知时，关闭<strong>“运行时通知”</strong>。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hans/app-trigger.png" alt="简体中文 App 自动化触发条件，已选择 Safari、已打开和立即运行"><figcaption>以 Safari 为例；第二条自动化要改选“已关闭”。</figcaption></figure></li>
+          <li><strong>进入动作编辑器。</strong><span>点<strong>“下一步”</strong>，然后点灰色的<strong>“新建快捷指令”</strong>卡片。不要在最初的建议页面直接搜索 HourNote。</span></li>
+          <li><strong>找到 HourNote 动作。</strong><span>进入新的快捷指令编辑器后，点<strong>“搜索操作”</strong>，输入 <strong>HourNote</strong>，选择<strong>“开始 App 追踪”</strong>。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hans/hournote-actions.png" alt="简体中文快捷指令搜索结果，显示结束 App 追踪和开始 App 追踪"><figcaption>正确进入编辑器后会看到 HourNote 的两个动作。</figcaption></figure></li>
+          <li><strong>填写记录名称。</strong><span>在<strong>“App 名称”</strong>中填写清晰名称，例如 Safari。关闭<strong>“运行时显示”</strong>，然后完成快捷指令。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hans/start-action.png" alt="简体中文开始 App 追踪动作，已填写 Safari 并关闭运行时显示"><figcaption>这里填写的文字会成为 HourNote 中显示的记录名称。</figcaption></figure></li>
+        </ol>
+        <h2>设置“关闭 App”自动化</h2>
+        <ol class="guide-steps"><li>为同一个 App 再建一条 App 自动化，这次只勾选<strong>“已关闭”</strong>，并选择<strong>“立即运行”</strong>。</li><li>点<strong>“下一步 → 新建快捷指令”</strong>，搜索 HourNote，选择<strong>“结束 App 追踪”</strong>。这个动作不需要填写 App 名称。</li><li>关闭<strong>“运行时显示”</strong>并完成。自动化列表中应该同时出现一条“打开”和一条“关闭”。</li></ol>
+        <h2>测试是否成功</h2>
+        <p>打开被追踪的 App，使用时间超过 HourNote 设置中的最短 App 追踪时长，然后关闭或离开该 App。再打开 HourNote，在日历中检查是否生成了完整记录。</p>
+        <h2>仍然无法使用</h2>
+        <ul><li><strong>搜不到 HourNote 动作：</strong>先打开一次 HourNote，彻底关闭“快捷指令”后重新打开，并确认是在<strong>“新建快捷指令”</strong>编辑器里搜索。</li><li><strong>记录没有开始：</strong>确认“打开”自动化是<strong>“立即运行”</strong>，且“App 名称”没有留空。</li><li><strong>记录没有结束：</strong>确认另有一条<strong>“已关闭”＋“结束 App 追踪”</strong>自动化。</li><li><strong>很短的使用没有记录：</strong>“设置 → 追踪设置”中有最短时长过滤；测试时请使用超过该时长。</li></ul>
+        <p class="privacy-note">HourNote 只接收你填写的名称和自动化触发时间，不会读取被追踪 App 的屏幕或内容。</p>
+      </section>
+
+      <section lang="zh-Hant" data-language-section="zh-Hant">
+        <p class="guide-kicker">HourNote · Apple 捷徑</p>
+        <h1>自動追蹤 App 使用時間</h1>
+        <p class="guide-lede">每個要追蹤的 App 都需要兩個個人自動化：開啟 App 時開始記錄，關閉 App 時結束記錄。</p>
+        <div class="notice"><strong>最容易漏掉的關鍵步驟：</strong>設定 App 觸發條件後，必須先點<strong>「新增捷徑」</strong>，進入編輯器後才搜尋 HourNote。</div>
+        <h2>開始前</h2>
+        <ul class="checklist"><li>先開啟一次 HourNote，讓系統向「捷徑」註冊動作。</li><li>使用自動化期間請保留 HourNote。</li><li>每個 App 的「開啟」與「關閉」必須分別建立自動化。</li></ul>
+        <h2>設定「開啟 App」自動化</h2>
+        <ol class="guide-steps">
+          <li><strong>新增 App 自動化。</strong><span>開啟<strong>捷徑 → 自動化</strong>，點右上角 <strong>+</strong>，選擇 <strong>App</strong>。</span></li>
+          <li><strong>選擇觸發條件。</strong><span>選擇要追蹤的 App，只勾選<strong>「已開啟」</strong>，選擇<strong>「立即執行」</strong>；若不想每次顯示通知，請關閉<strong>「執行時通知」</strong>。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hant/app-trigger.png" alt="繁體中文 App 自動化觸發條件，已選擇 Safari、已開啟及立即執行"><figcaption>以 Safari 為例；第二個自動化要改選「已關閉」。</figcaption></figure></li>
+          <li><strong>進入動作編輯器。</strong><span>點<strong>「下一步」</strong>，再點灰色的<strong>「新增捷徑」</strong>卡片。不要在最初的建議畫面直接搜尋 HourNote。</span></li>
+          <li><strong>找到 HourNote 動作。</strong><span>在新捷徑編輯器點<strong>「搜尋動作」</strong>，輸入 <strong>HourNote</strong>，選擇<strong>「開始 App 追蹤」</strong>。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hant/hournote-actions.png" alt="繁體中文捷徑搜尋畫面，顯示 HourNote 的開始與結束追蹤動作"><figcaption>正確進入編輯器後會看到 HourNote 的兩個動作。</figcaption></figure></li>
+          <li><strong>填寫記錄名稱。</strong><span>在<strong>「App 名稱」</strong>輸入清楚的名稱，例如 Safari。關閉<strong>「執行時顯示」</strong>，再完成捷徑。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/zh-Hant/start-action.png" alt="繁體中文開始 App 追蹤動作，已填寫 Safari 並關閉執行時顯示"><figcaption>這裡輸入的文字會成為 HourNote 中顯示的記錄名稱。</figcaption></figure></li>
+        </ol>
+        <h2>設定「關閉 App」自動化</h2>
+        <ol class="guide-steps"><li>為同一個 App 再建一個 App 自動化，這次只勾選<strong>「已關閉」</strong>，並選擇<strong>「立即執行」</strong>。</li><li>點<strong>「下一步 → 新增捷徑」</strong>，搜尋 HourNote，選擇<strong>「結束 App 追蹤」</strong>；這個動作不需要 App 名稱。</li><li>關閉<strong>「執行時顯示」</strong>並完成。自動化列表中應同時有一個「開啟」和一個「關閉」。</li></ol>
+        <h2>測試是否成功</h2>
+        <p>開啟被追蹤的 App，使用時間超過 HourNote 設定中的最短 App 追蹤時間，然後關閉或離開該 App。回到 HourNote，在日曆檢查完整記錄。</p>
+        <h2>仍然無法使用</h2>
+        <ul><li><strong>找不到 HourNote 動作：</strong>先開啟一次 HourNote，完全關閉「捷徑」後重新開啟，並在<strong>「新增捷徑」</strong>編輯器中搜尋。</li><li><strong>記錄沒有開始：</strong>確認「開啟」自動化使用<strong>「立即執行」</strong>，且「App 名稱」不是空白。</li><li><strong>記錄沒有結束：</strong>確認另有一個<strong>「已關閉」＋「結束 App 追蹤」</strong>自動化。</li><li><strong>很短的使用沒有記錄：</strong>「設定 → 追蹤設定」有最短時間過濾；測試時請使用超過該時間。</li></ul>
+        <p class="privacy-note">HourNote 只會收到你輸入的名稱與自動化觸發時間，不會讀取被追蹤 App 的畫面或內容。</p>
+      </section>
+
+      <section lang="ja" data-language-section="ja">
+        <p class="guide-kicker">HourNote · Appleショートカット</p>
+        <h1>Appの使用時間を自動で記録する</h1>
+        <p class="guide-lede">記録するAppごとに、Appを開いたときに記録を開始するオートメーションと、閉じたときに終了するオートメーションの2つを作成します。</p>
+        <div class="notice"><strong>最も見落としやすい手順：</strong>Appの条件を設定したら、先に<strong>「新規ショートカット」</strong>をタップしてください。HourNoteはショートカット編集画面で検索します。</div>
+        <h2>始める前に</h2>
+        <ul class="checklist"><li>HourNoteを一度開き、アクションをショートカットに登録します。</li><li>オートメーションを使用する間はHourNoteを削除しないでください。</li><li>各Appに「開く」と「閉じる」の2つのオートメーションが必要です。</li></ul>
+        <h2>「Appを開く」オートメーション</h2>
+        <ol class="guide-steps">
+          <li><strong>Appオートメーションを作成します。</strong><span><strong>ショートカット → オートメーション</strong>を開き、右上の<strong>＋</strong>、<strong>App</strong>の順にタップします。</span></li>
+          <li><strong>条件を選びます。</strong><span>記録するAppを選び、<strong>「開いている」</strong>だけを選択して<strong>「すぐに実行」</strong>を選びます。毎回の通知が不要なら<strong>「実行時に通知」</strong>をオフにします。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/ja/app-trigger.png" alt="日本語のAppオートメーション条件。Safari、開いている、すぐに実行が選択されている"><figcaption>Safariの例です。2つ目のオートメーションでは「閉じている」を選びます。</figcaption></figure></li>
+          <li><strong>アクション編集画面を開きます。</strong><span><strong>「次へ」</strong>をタップし、灰色の<strong>「新規ショートカット」</strong>タイルをタップします。最初の候補画面ではHourNoteを検索しません。</span></li>
+          <li><strong>HourNoteのアクションを探します。</strong><span>新しいショートカットで<strong>「アクションを検索」</strong>をタップし、<strong>HourNote</strong>と入力して<strong>「Appの使用記録を開始」</strong>を選びます。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/ja/hournote-actions.png" alt="日本語のショートカットでHourNoteの開始と終了アクションを検索した画面"><figcaption>ショートカット編集画面ではHourNoteの2つのアクションが表示されます。</figcaption></figure></li>
+          <li><strong>記録名を入力します。</strong><span><strong>「App名」</strong>にSafariなどの分かりやすい名前を入力し、<strong>「実行時に表示」</strong>をオフにして完了します。</span><figure><img loading="lazy" decoding="async" src="../assets/automation/ja/start-action.png" alt="日本語のApp使用記録開始アクション。Safariを入力し実行時に表示をオフにしている"><figcaption>入力した文字がHourNote内の記録名になります。</figcaption></figure></li>
+        </ol>
+        <h2>「Appを閉じる」オートメーション</h2>
+        <ol class="guide-steps"><li>同じAppでもう1つ作成し、今度は<strong>「閉じている」</strong>だけと<strong>「すぐに実行」</strong>を選びます。</li><li><strong>「次へ → 新規ショートカット」</strong>を開き、HourNoteを検索して<strong>「Appの使用記録を終了」</strong>を選びます。App名の入力は不要です。</li><li><strong>「実行時に表示」</strong>をオフにして完了します。オートメーション一覧に「開く」と「閉じる」の2行があれば正しく設定されています。</li></ol>
+        <h2>テスト</h2><p>対象のAppを開き、HourNoteで設定した最短記録時間より長く使用してから閉じるか別のAppへ移動します。HourNoteのカレンダーで完了した記録を確認します。</p>
+        <h2>動作しない場合</h2><ul><li><strong>HourNoteが見つからない：</strong>HourNoteを一度開き、ショートカットAppを完全に終了して再度開き、<strong>「新規ショートカット」</strong>内で検索します。</li><li><strong>開始されない：</strong>「開く」側が<strong>「すぐに実行」</strong>で、App名が空欄でないことを確認します。</li><li><strong>終了されない：</strong><strong>「閉じている」＋「Appの使用記録を終了」</strong>の別のオートメーションを確認します。</li><li><strong>短い利用が記録されない：</strong>「設定 → トラッキング設定」の最短時間より長く使用してテストします。</li></ul>
+        <p class="privacy-note">HourNoteが受け取るのは、入力した名前とオートメーションの時刻だけです。対象Appの画面や内容は読み取りません。</p>
+      </section>
+
+      <section lang="es" data-language-section="es">
+        <p class="guide-kicker">HourNote · Atajos de Apple</p>
+        <h1>Registrar automáticamente el uso de apps</h1>
+        <p class="guide-lede">Crea dos automatizaciones personales por cada app: una inicia el registro al abrirla y la otra lo termina al cerrarla.</p>
+        <div class="notice"><strong>El paso que más se omite:</strong> después de configurar la condición App, pulsa primero <strong>Nuevo atajo</strong>. Busca HourNote solo cuando se abra el editor del atajo.</div>
+        <h2>Antes de empezar</h2><ul class="checklist"><li>Abre HourNote una vez para registrar sus acciones en Atajos.</li><li>Mantén HourNote instalado mientras uses las automatizaciones.</li><li>Cada app necesita una automatización de apertura y otra de cierre.</li></ul>
+        <h2>Automatización al abrir la app</h2>
+        <ol class="guide-steps">
+          <li><strong>Crea una automatización App.</strong><span>Abre <strong>Atajos → Automatización</strong>, toca <strong>+</strong> y elige <strong>App</strong>.</span></li>
+          <li><strong>Elige la condición.</strong><span>Selecciona la app, marca solo <strong>Se abre</strong>, elige <strong>Ejecutar inmediatamente</strong> y desactiva <strong>Notificar cuando se ejecute</strong> si no quieres avisos.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/es/app-trigger.png" alt="Condición de automatización App en español con Safari, Se abre y Ejecutar inmediatamente"><figcaption>Ejemplo con Safari. En la segunda automatización selecciona Se cierra.</figcaption></figure></li>
+          <li><strong>Abre el editor de acciones.</strong><span>Toca <strong>Siguiente</strong> y después el mosaico gris <strong>Nuevo atajo</strong>. No busques HourNote en la primera pantalla de sugerencias.</span></li>
+          <li><strong>Busca las acciones de HourNote.</strong><span>En el editor, toca <strong>Buscar acciones</strong>, escribe <strong>HourNote</strong> y elige <strong>Iniciar seguimiento de app</strong>.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/es/hournote-actions.png" alt="Búsqueda en Atajos en español con las acciones de inicio y fin de HourNote"><figcaption>Las dos acciones de HourNote aparecen dentro del editor.</figcaption></figure></li>
+          <li><strong>Escribe el nombre del registro.</strong><span>Introduce un <strong>Nombre de la app</strong> claro, por ejemplo Safari. Desactiva <strong>Mostrar al ejecutar</strong> y finaliza el atajo.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/es/start-action.png" alt="Acción Iniciar seguimiento de app en español con Safari y Mostrar al ejecutar desactivado"><figcaption>El texto introducido será el nombre que se muestre en HourNote.</figcaption></figure></li>
+        </ol>
+        <h2>Automatización al cerrar la app</h2><ol class="guide-steps"><li>Crea otra automatización para la misma app, marca solo <strong>Se cierra</strong> y elige <strong>Ejecutar inmediatamente</strong>.</li><li>Toca <strong>Siguiente → Nuevo atajo</strong>, busca HourNote y elige <strong>Finalizar seguimiento de app</strong>. No requiere el nombre de la app.</li><li>Desactiva <strong>Mostrar al ejecutar</strong> y termina. La lista debe contener una fila de apertura y otra de cierre.</li></ol>
+        <h2>Prueba</h2><p>Abre la app, úsala durante más tiempo que la duración mínima configurada en HourNote y ciérrala o sal de ella. Comprueba el registro completo en el calendario de HourNote.</p>
+        <h2>Si no funciona</h2><ul><li><strong>No aparecen las acciones:</strong> abre HourNote una vez, cierra Atajos por completo, vuelve a abrirlo y busca dentro de <strong>Nuevo atajo</strong>.</li><li><strong>El registro no empieza:</strong> confirma que la automatización de apertura usa <strong>Ejecutar inmediatamente</strong> y que el nombre no está vacío.</li><li><strong>El registro no termina:</strong> confirma que existe otra automatización con <strong>Se cierra</strong> y <strong>Finalizar seguimiento de app</strong>.</li><li><strong>No aparecen usos breves:</strong> prueba durante más tiempo que el mínimo de Ajustes → Seguimiento.</li></ul>
+        <p class="privacy-note">HourNote solo recibe el nombre que introduces y las horas de las automatizaciones. No lee la pantalla ni el contenido de la app seguida.</p>
+      </section>
+
+      <section lang="de" data-language-section="de">
+        <p class="guide-kicker">HourNote · Apple Kurzbefehle</p>
+        <h1>App-Nutzung automatisch erfassen</h1>
+        <p class="guide-lede">Erstelle für jede App zwei persönliche Automationen: Eine startet die Aufzeichnung beim Öffnen, die andere beendet sie beim Schließen.</p>
+        <div class="notice"><strong>Der meist übersehene Schritt:</strong> Tippe nach dem App-Auslöser zuerst auf <strong>Neuer Kurzbefehl</strong>. Suche erst im geöffneten Kurzbefehl-Editor nach HourNote.</div>
+        <h2>Vorbereitung</h2><ul class="checklist"><li>Öffne HourNote einmal, damit seine Aktionen in Kurzbefehle registriert werden.</li><li>Lass HourNote installiert, solange du die Automationen verwendest.</li><li>Jede App benötigt getrennte Automationen für Öffnen und Schließen.</li></ul>
+        <h2>Automation beim Öffnen</h2>
+        <ol class="guide-steps">
+          <li><strong>App-Automation erstellen.</strong><span>Öffne <strong>Kurzbefehle → Automation</strong>, tippe auf <strong>+</strong> und wähle <strong>App</strong>.</span></li>
+          <li><strong>Auslöser wählen.</strong><span>Wähle die App, aktiviere nur <strong>geöffnet wird</strong> und wähle <strong>Sofort ausführen</strong>. Deaktiviere <strong>Bei Ausführung benachrichtigen</strong>, wenn du keine Meldung möchtest.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/de/app-trigger.png" alt="Deutscher App-Auslöser mit Safari, geöffnet wird und Sofort ausführen"><figcaption>Beispiel mit Safari. Für die zweite Automation wird geschlossen wird gewählt.</figcaption></figure></li>
+          <li><strong>Aktionseditor öffnen.</strong><span>Tippe auf <strong>Weiter</strong> und dann auf die graue Kachel <strong>Neuer Kurzbefehl</strong>. Suche nicht bereits auf der ersten Vorschlagsseite nach HourNote.</span></li>
+          <li><strong>HourNote-Aktionen finden.</strong><span>Tippe im neuen Editor auf <strong>Aktionen suchen</strong>, gib <strong>HourNote</strong> ein und wähle <strong>App-Nutzung starten</strong>.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/de/hournote-actions.png" alt="Deutsche Kurzbefehle-Suche mit den HourNote-Aktionen zum Starten und Beenden"><figcaption>Im Kurzbefehl-Editor erscheinen beide HourNote-Aktionen.</figcaption></figure></li>
+          <li><strong>Aufzeichnung benennen.</strong><span>Gib einen eindeutigen <strong>App-Namen</strong> ein, zum Beispiel Safari. Deaktiviere <strong>Beim Ausführen anzeigen</strong> und schließe den Kurzbefehl ab.</span><figure><img loading="lazy" decoding="async" src="../assets/automation/de/start-action.png" alt="Deutsche Aktion App-Nutzung starten mit Safari und deaktiviertem Beim Ausführen anzeigen"><figcaption>Dieser Text wird in HourNote als Name der Aufzeichnung angezeigt.</figcaption></figure></li>
+        </ol>
+        <h2>Automation beim Schließen</h2><ol class="guide-steps"><li>Erstelle für dieselbe App eine zweite Automation, aktiviere nur <strong>geschlossen wird</strong> und wähle <strong>Sofort ausführen</strong>.</li><li>Tippe auf <strong>Weiter → Neuer Kurzbefehl</strong>, suche HourNote und wähle <strong>App-Nutzung beenden</strong>. Dafür ist kein App-Name erforderlich.</li><li>Deaktiviere <strong>Beim Ausführen anzeigen</strong> und schließe ab. In der Liste müssen je eine Zeile für Öffnen und Schließen stehen.</li></ol>
+        <h2>Test</h2><p>Öffne die App, verwende sie länger als die in HourNote eingestellte Mindestdauer und schließe oder verlasse sie. Prüfe anschließend den vollständigen Eintrag im HourNote-Kalender.</p>
+        <h2>Wenn es nicht funktioniert</h2><ul><li><strong>HourNote-Aktionen fehlen:</strong> Öffne HourNote einmal, beende Kurzbefehle vollständig, öffne es erneut und suche innerhalb von <strong>Neuer Kurzbefehl</strong>.</li><li><strong>Aufzeichnung startet nicht:</strong> Prüfe <strong>Sofort ausführen</strong> und einen nicht leeren App-Namen.</li><li><strong>Aufzeichnung endet nicht:</strong> Prüfe die zweite Automation mit <strong>geschlossen wird</strong> und <strong>App-Nutzung beenden</strong>.</li><li><strong>Kurze Nutzung fehlt:</strong> Teste länger als die Mindestdauer unter Einstellungen → Tracking.</li></ul>
+        <p class="privacy-note">HourNote erhält nur den eingegebenen Namen und die Zeitpunkte der Automation. Bildschirm und Inhalte der erfassten App werden nicht gelesen.</p>
+      </section>
+    </article>
+  </main>
+  <footer>© 2026 HourNote</footer>
+</body>
+</html>
